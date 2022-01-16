@@ -165,6 +165,43 @@
   display: none;
 }
 
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1;
+  background: var(--primary-color);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  color: var(--white-color);
+  opacity: 0.3;
+  border: 1px solid #aaa;
+  pointer-events: painted;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+}
+
+.back-to-top:after {
+  position: absolute;
+  content: "";
+  width: calc(5rem / 4);
+  height: calc(5rem / 4);
+  border-width: 0.5rem;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  top: 1.8rem;
+  transform: rotate(135deg);
+}
+
 @media (max-width: 800px){
   .intro-content, .grid {
     grid-template-columns: 1fr;
